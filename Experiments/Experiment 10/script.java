@@ -46,7 +46,7 @@ class CurrentAccount extends BankAccount {
 }
 // Main class
 class Exp10 {
-    public: public static void main(String[] args) {
+    public static void main(String[] args) {
         // Creating objects
         SavingsAccount sa = new SavingsAccount(101, "Rahul", 10000);
         CurrentAccount ca = new CurrentAccount(102, "Anita", 20000);
