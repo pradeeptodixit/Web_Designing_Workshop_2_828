@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 function App() {
   // 🔹 State creation
   const [count, setCount] = useState(0);
