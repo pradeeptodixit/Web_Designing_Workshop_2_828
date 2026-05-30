@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Forecast App</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div class="weather-app">
+      <div class="search-box">
+        <input type="text" id="city-input" placeholder="Search any city..." />
+
+        <button id="search-btn">
+          <i class="fas fa-search"></i>
+        </button>
+
+        <button id="voice-btn">
+          <i class="fas fa-microphone"></i>
+        </button>
+
+        <button id="location-btn">
+          <i class="fas fa-location-crosshairs"></i>
+        </button>
+
+        <button id="theme-btn">
+          <i class="fas fa-moon"></i>
+        </button>
+      </div>
+
+      <div class="weather-card">
+        <div class="weather-top">
+          <h1 id="city-name">Ghaziabad</h1>
+          <p id="date">Saturday, 30 May 2026</p>
+        </div>
+
+        <div class="weather-main">
+          <div class="temperature">
+            <h2 id="temp">32°C</h2>
+            <p id="condition">Sunny</p>
+          </div>
+
+          <div class="weather-icon">
+            <img
+              id="weather-icon"
+              src="https://cdn-icons-png.flaticon.com/512/869/869869.png"
+              alt="weather"
+            />
+          </div>
+        </div>
+
+        <div class="weather-details">
+          <div class="detail-box">
+            <i class="fas fa-water"></i>
+            <div>
+              <h4>Humidity</h4>
+              <p id="humidity">60%</p>
+            </div>
+          </div>
+
+          <div class="detail-box">
+            <i class="fas fa-wind"></i>
+            <div>
+              <h4>Wind</h4>
+              <p id="wind">12 km/h</p>
+            </div>
+          </div>
+
+          <div class="detail-box">
+            <i class="fas fa-temperature-high"></i>
+            <div>
+              <h4>Feels Like</h4>
+              <p id="feels-like">35°C</p>
+            </div>
+          </div>
+        </div>
+        <div class="extra-data">
+          <div class="card">
+            <i class="fas fa-eye"></i>
+            <h3>Visibility</h3>
+            <p id="visibility">10 km</p>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-sun"></i>
+            <h3>UV Index</h3>
+            <p id="uv">4</p>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-gauge"></i>
+            <h3>Pressure</h3>
+            <p id="pressure">1012 hPa</p>
+          </div>
+
+          <div class="card">
+            <i class="fas fa-smog"></i>
+            <h3>AQI</h3>
+            <p id="aqi">Good</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Forecast -->
+
+      <div class="forecast-section">
+        <h2>5-Day Forecast</h2>
+
+        <div class="forecast-container">
+          <div class="forecast-card">
+            <h3>Sun</h3>
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" />
+            <p>34°C</p>
+          </div>
+
+          <div class="forecast-card">
+            <h3>Mon</h3>
+            <img src="https://cdn-icons-png.flaticon.com/512/414/414825.png" />
+            <p>30°C</p>
+          </div>
+
+          <div class="forecast-card">
+            <h3>Tue</h3>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1163/1163624.png"
+            />
+            <p>29°C</p>
+          </div>
+
+          <div class="forecast-card">
+            <h3>Wed</h3>
+            <img
+              src="https://cdn-icons-png.flaticon.com/512/1146/1146869.png"
+            />
+            <p>31°C</p>
+          </div>
+
+          <div class="forecast-card">
+            <h3>Thu</h3>
+            <img src="https://cdn-icons-png.flaticon.com/512/869/869869.png" />
+            <p>35°C</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
