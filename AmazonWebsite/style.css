@@ -310,7 +310,7 @@ i {
   position: relative;
   height: 560px;
 }
-.image-box {
+.Image-box {
   display: flex;
   position: absolute;
   animation: carousel 15s alternate infinite;
@@ -342,6 +342,7 @@ i {
     left: calc(-1380 * 3px);
   }
 }
+
 .container-1 {
   position: absolute;
   z-index: 1;
@@ -483,6 +484,7 @@ i {
   margin-bottom: 15px;
   cursor: pointer;
 }
+
 .l-btn,
 .r-btn {
   background-color: rgb(255, 255, 255, 1);
@@ -752,7 +754,7 @@ i {
   bottom: 20px;
   right: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   overflow: hidden;
@@ -810,4 +812,22 @@ i {
   color: white;
   padding: 10px 15px;
   cursor: pointer;
+}
+
+.add-cart {
+  width: 100%;
+  margin: 12px 0;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  background: #ffd814;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-cart:hover {
+  background: #f7ca00;
+  transform: scale(1.02);
 }
