@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -157,7 +157,7 @@
             <span class="small-text">Returns</span>
             <span class="big-text">& Orders</span>
           </div>
-          <div class="flex cart">
+          <div class="flex cart" id="cartIcon">
             <i class="fas fa-shopping-cart"></i>
             <span class="cart-count" id="cartCount">0</span>
             <span class="ca">Cart</span>
@@ -575,6 +575,11 @@
         <input type="text" id="chat-input" placeholder="Ask something..." />
         <button id="send-btn">Send</button>
       </div>
+    </div>
+    <!-- Cart Sidebar -->
+    <div id="cartPanel" class="cart-panel">
+      <h2>🛒 Shopping Cart</h2>
+      <div id="cartItems"></div>
     </div>
     <script src="app.js"></script>
   </body>

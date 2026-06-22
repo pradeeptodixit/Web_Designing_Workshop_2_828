@@ -81,7 +81,7 @@ sign.addEventListener("click", () => {
 ========================= */
 
 const voiceBtn = document.getElementById("voice-btn");
-const searchBox = document.getElementById("search-box");
+const searchBox = document.getElementById("searchInput");
 
 const SpeechRecognition =
   window.SpeechRecognition || window.webkitSpeechRecognition;
@@ -216,36 +216,63 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // });
 
-// Cart Counter
+// ======================
+// SHOPPING CART
+// ======================
+
 let count = 0;
+let cart = [];
 
-// Cart count element
 const cartDisplay = document.getElementById("cartCount");
+const cartItems = document.getElementById("cartItems");
+const cartIcon = document.getElementById("cartIcon");
+const cartPanel = document.getElementById("cartPanel");
 
-// All Add to Cart buttons
-const buttons = document.querySelectorAll(".add-cart");
+// Open/Close Cart
+cartIcon.addEventListener("click", () => {
+  cartPanel.classList.toggle("show");
+});
 
-// Add click event to every button
-buttons.forEach((button) => {
+// Add products to cart
+document.querySelectorAll(".add-cart").forEach((button) => {
   button.addEventListener("click", function () {
-    // Increase cart count
+    const box = this.closest(".box");
+
+    const productName = box.querySelector("h3").innerText;
+
+    const productImage = box.querySelector("img").src;
+
+    cart.push({
+      name: productName,
+      image: productImage,
+    });
+
     count++;
+    cartDisplay.innerText = count;
 
-    // Update cart
-    cartDisplay.textContent = count;
+    updateCart();
 
-    // Change button text
     this.innerHTML = "✔ Added";
-
     this.style.background = "green";
     this.style.color = "white";
 
-    // Reset button after 1 second
     setTimeout(() => {
       this.innerHTML = "🛒 Add to Cart";
-
       this.style.background = "#FFD814";
       this.style.color = "black";
     }, 1000);
   });
 });
+
+function updateCart() {
+  cartItems.innerHTML = "";
+
+  cart.forEach((product) => {
+    cartItems.innerHTML += `
+      <div class="cart-item">
+          <img src="${product.image}" alt="${product.name}">
+          <span>${product.name}</span>
+      </div>
+    `;
+  });
+}
