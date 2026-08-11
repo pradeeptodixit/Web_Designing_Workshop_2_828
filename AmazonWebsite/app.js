@@ -266,7 +266,6 @@ document.querySelectorAll(".add-cart").forEach((button) => {
 
 function updateCart() {
   cartItems.innerHTML = "";
-
   cart.forEach((product) => {
     cartItems.innerHTML += `
       <div class="cart-item">
